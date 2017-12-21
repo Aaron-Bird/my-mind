@@ -13,8 +13,9 @@
 .content {
 	position: relative;
 	display: inline-block;
-	white-space: nowrap;
 	cursor: pointer;
+	white-space: nowrap;
+	/* border-radius: 2px; */
 }
 
 .content > * {
@@ -23,11 +24,30 @@
 
 .text {
 	display: inline-block;
-	text-align: center;
 	min-width: 0.5em;
-	min-height: 1.3em;
+	/* min-height: 1.3em; */
+	min-height: 1.4em;
 	line-height: 1.3em;
+	text-align: center;
 	outline: none;
+}
+
+#port > .item>.content .text {
+	line-height: 1.2em;
+}
+
+.shape-underline>.content {
+	/* outline: 1px solid; */
+}
+
+.shape-underline>.content>.text {
+	margin-top: -1px;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+	font-size: 1.1em;
+	line-height: 1em;
+	border-radius: 4px;
 }
 
 .value, .status {
@@ -35,8 +55,8 @@
 }
 
 .text ~ .value, .text ~ .status {
-	margin-left: 0.2em;
 	margin-right: 0;
+	margin-left: 0.2em;
 }
 
 .value {
@@ -68,24 +88,31 @@
 
 canvas {
 	position: absolute;
-	left: 0;
 	top: 0;
+	left: 0;
 }
 
 .toggle {
 	position: absolute;
-	width: 12px;
-	height: 12px;
-	line-height: 12px;
-	cursor: pointer;
-	border-radius: 50%;
-	border: 1px solid #00f;
-	background-color: #88f;
-	text-align: center;
-	font-weight: bold;
+	width: 10px;
+	height: 10px;
+	margin-top: -1px;
+	/* font-weight: bold; */
 	font-family: sans-serif;
-	color: #fff;
-	opacity: 0.7;
+	/* opacity: 0.7; */
+	font-size: 14px;
+	/* line-height: 12px; */
+	line-height: 10px;
+	cursor: pointer;
+	/* background-color: rgba(255,255,255,.8); */
+	text-align: center;
+	/* color: #fff; */
+	color: #555;
+	/* border: 1px solid #00f; */
+	border: 1px solid #aaa;
+	border-radius: 50%;
+	/* background-color: #88f; */
+	background-color: inherit;
 }
 
 .toggle:hover {

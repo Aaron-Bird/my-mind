@@ -4,15 +4,20 @@
 @import url(menu.css);
 
 * {
-	font-family: source sans pro, sans-serif;
+	/* font-family: source sans pro, sans-serif; */
+	font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
 }
 
 html, body {
-	margin: 0;
 	overflow: hidden;
 	height: 100%;
-	background-color: #eed;
+	margin: 0;
 	-webkit-user-select: none; /* no magnifier on hold */
+	/* background-color: #9BF5C7; */
+ 	/* background-size: 40px 40px; */
+    /* background-image: linear-gradient(to right, rgba(255,255,255,.5) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,.5) 1px, transparent 1px); */
+	color:  #555;
+	background-color: #fefefe;
 }
 
 [contenteditable] { /* allow for editable items */
@@ -45,15 +50,15 @@ ul {
 
 .ghost {
 	position: absolute !important; /* to prevent collision with .content */
-	opacity: 0.5;
 	z-index: 1;
+	opacity: 0.5;
 }
 
 #tip {
 	position: fixed;
 	z-index: 1;
-	left: 10px;
 	bottom: 5px;
+	left: 10px;
 	transition: all 500ms;
 }
 

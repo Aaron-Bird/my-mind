@@ -1,193 +1,239 @@
 button:not(:disabled) {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .ui {
-	position: fixed;
-	right: 0;
-	top: 0;
-	height: 100%;
-	background-color: #fff;
-	width: 200px;
-	box-shadow: 0 0 2px 2px #666;
-	-webkit-transition: -webkit-transform 500ms;
-	transition: transform 500ms;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    -webkit-transition: -webkit-transform 500ms;
+    transition: transform 500ms;
+    background-color: #fff;
+    /* box-shadow: 0 0 2px 2px #666; */
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, .1);
+}
+
+.ui img {
+    width: 36px;
+    height: 36px;
+
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .1))
 }
 
 .ui:not(.visible) {
-	-webkit-transform: translate(100%, 0);
-	transform: translate(100%, 0);
+    -webkit-transform: translate(100%, 0);
+    transform: translate(100%, 0);
 }
 
 .ui h3 {
-	background-color: #34495e;
-	color: #fff;
-	padding: 0.2em 0;
-	margin: 0;
-	text-transform: capitalize;
-	text-align: center;
+    margin: 0;
+    padding: 0.2em 0;
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: #34495e;
 }
 
-.ui select, .ui input {
-	background-color: transparent;
-	border: 1px solid rgba(50, 70, 90, 0.5);
-	font-size: 13px;
-	border-radius: 4px;
-	padding: 4px;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-font-smoothing: subpixel-antialiased;
-	transition: all 250ms linear;
+.ui select,
+.ui input {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 4px;
+    /* font-size: 13px; */
+    font-size: 14px;
+    transition: all 250ms linear;
+    /* border: 1px solid rgba(50, 70, 90, 0.5); */
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
-.ui select:hover, .ui input:hover, .ui select:focus, .ui input:focus {
-	border-color: rgba(50, 70, 90, 1);
+.ui select:hover,
+.ui input:hover,
+.ui select:focus,
+.ui input:focus {
+    border-color: rgba(50, 70, 90, 1);
 }
 
-.ui select, .ui input, .ui #color {
-	width: 168px;
+.ui select,
+.ui input,
+.ui #color {
+    width: 168px;
 }
 
 .ui .go {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .ui p {
-	margin: 8px 16px;
+    margin: 8px 16px;
 }
 
 .ui p.desc {
-	font-size: 13px;
+    font-size: 13px;
 }
 
 .ui:not([id]) button {
-	border: none;
-	padding: 0;
-	margin: 0 4px;
-	background-color: transparent;
-	width: 32px;
+    width: 32px;
+    margin: 0 4px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
 }
 
 .ui button:first-child {
-	margin-left: 0 !important;
+    margin-left: 0 !important;
 }
 
 .ui button:last-child {
-	margin-right: 0 !important;
-}
-
-.ui button[data-command=Help] {
-	position: absolute;
-	left: -50px;
-	top: 5px;
+    margin-right: 0 !important;
 }
 
 .ui table {
-	width: 100%;
-	border-collapse: collapse;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .ui table td:first-child {
-	padding-left: 16px;
+    padding-left: 16px;
 }
 
 .ui table td:last-child {
-	text-align: right;
-	padding-right: 16px;
+    padding-right: 16px;
+    text-align: right;
 }
 
 .ui span {
-	text-transform: uppercase;
-	font-size: 80%;
+    font-size: 80%;
+    text-transform: uppercase;
+    /* padding-left: 8px; */
+    /* letter-spacing: 1px; */
 }
 
 .ui #color {
-	display: block;
+    display: block;
 }
 
 .ui #color::after {
-	clear: both;
-	content: "";
-	display: block;
+    display: block;
+    clear: both;
+    content: "";
 }
 
 .ui [data-color] {
-	display: block;
-	float: left;
-	width: 14px;
-	height: 14px;
-	border-radius: 3px;
-	margin-right: 2px;
-	border: 1px solid transparent;
+    display: block;
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    border: 1px solid transparent;
+    border-radius: 3px;
 }
 
-.ui [data-color]:hover, .ui [data-color]:first-child {
-	border-color: #000;
+.ui [data-color]:hover,
+.ui [data-color]:first-child {
+    border-color: #000;
 }
 
 .ui #github {
-	position: absolute;
-	right: 8px;
-	bottom: 6px;
+    position: absolute;
+    right: 8px;
+    bottom: 6px;
 }
 
 .ui #github img {
-	vertical-align: middle;
+    vertical-align: middle;
+}
+
+.ui button[data-command=Help] {
+    position: absolute;
+    /* left: -50px; */
+    /* top: 5px; */
+    right: 8px;
+    bottom: 2px;
 }
 
 .ui #toggle {
-	z-index: 999;
-	position: absolute;
-	left: -23px;
-	top: 48%;
-	width: 35px;
-	height: 35px;
-	padding: 0 0 0 2px;
-	text-align: left;
-
-	border: none;
-	background-color: #fff;
-	box-shadow: -3px 0 2px 0px #666;
-
-	line-height: 8px;
-	border-radius: 50%;
+    /* z-index: 999; */
+    position: absolute;
+    /* top: 48%; */
+    top: 60%;
+    /* left: -23px; */
+    left: -20px;
+    width: 35px;
+    height: 35px;
+    padding: 0 0 0 2px;
+    /* line-height: 8px; */
+    line-height: 35px;
+    /* text-align: left; */
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    outline: 0;
+    background-color: #fff;
+    /* box-shadow: -3px 0 2px 0px #666; */
+    box-shadow: -1px 0 2px 1px rgba(0, 0, 0, .1);
 }
 
 .ui #toggle:after {
-	content: "←";
-	font-weight: bold;
-	font-size: 22px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-top: -4px;
+    margin-left: -2px;
+    /* content: "←"; */
+    content: "";
+    vertical-align: middle;
+    background: url(../icons/arrow_left.png);
+    background-size: 24px;
+    /* font-weight: bold; */
+    /* font-size: 22px; */
 }
 
 .ui.visible #toggle:after {
-	content: "→";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-top: -4px;
+    margin-left: -2px;
+    /* content: "→"; */
+    content: "";
+    vertical-align: middle;
+    background: url(../icons/arrow_right.png);
+    background-size: 24px;
 }
 
 .ui#help {
-	overflow-y: auto;
-	right: auto;
-	left: 0;
-	background-color: rgba(255, 255, 255, 0.7);
-	width: 250px;
+    right: auto;
+    left: 0;
+    overflow-y: auto;
+    /* width: 250px; */
+    width: 270px;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    background-color: #fff;
 }
 
 .ui#help:not(.visible) {
-	-webkit-transform: translate(-100%, 0);
-	transform: translate(-100%, 0);
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
 }
 
 .ui#help table {
-	font-size: 80%;
+    font-size: 80%;
 }
 
 .ui#io button {
-	width: 45%;
+    width: 45%;
 }
 
 .ui#io button:nth-child(odd) {
-	float: left;
+    float: left;
 }
 
 .ui#io button:nth-child(even) {
-	float: right;
+    float: right;
 }

@@ -1,28 +1,45 @@
 .shape-box > .content {
 	padding: 0.15em 0.4em;
-	background-color: #fff;
-	border: 1px solid #666;
+	border: 1px solid #aaa;
 	border-radius: 3px;
 }
 
 .shape-ellipse > .content {
-	background-color: #fff;
-	border: 1px solid #666;
-	border-radius: 50%;
 	padding: 0.5em 1em;
+	border: 1px solid #aaa;
+	border-radius: 50%;
+}
+
+#port,
+#port ul,
+#port li,
+.shape-box > .content,
+.shape-ellipse > .content {
+	background-color: inherit;
 }
 
 /* current */
-
-.current > .content {
-	background-color: rgba(255, 255, 187, 0.9);
+#port>.shape-box.current > .content {
+	background-color: rgba(200,250,200, 0.8);
 }
 
+.current > .content {
+	background-color: rgba(200,250,200, 0.8);
+}
+
+.shape-underline.current > .content {
+	background-color: transparent;
+}
+
+.shape-underline.current > .content .text {
+	background-color: rgba(200,250,200, 0.8);
+}
 /* root */
 
 #port > .item > .content {
-	font-weight: bold;
-	border-width: 2px;
+	/* personal change del bold*/
+	/* font-weight: bold; */
+	/* border-width: 2px; */
 	font-size: 140%;
 }
 
@@ -33,6 +50,7 @@
 /* 1st children */
 
 #port > .item > .children > .item > .content {
-	border-width: 2px;
+	/* border-width: 2px; */
 	font-size: 120%;
 }
+
