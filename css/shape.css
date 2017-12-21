@@ -18,22 +18,19 @@
 	background-color: inherit;
 }
 
-/* current */
-#port>.shape-box.current > .content {
-	background-color: rgba(200,250,200, 0.8);
-}
 
-.current > .content {
-	background-color: rgba(200,250,200, 0.8);
+
+/* current */
+#port>.shape-box.current > .content,
+.current > .content,
+.shape-underline.current > .content .text {
+	background-color: rgba(0,213,224, 0.2);
 }
 
 .shape-underline.current > .content {
 	background-color: transparent;
 }
 
-.shape-underline.current > .content .text {
-	background-color: rgba(200,250,200, 0.8);
-}
 /* root */
 
 #port > .item > .content {

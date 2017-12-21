@@ -2,6 +2,29 @@ button:not(:disabled) {
     cursor: pointer;
 }
 
+.btnstyle-1 {
+    background-color: #00D5E0;
+    border-radius: 4px;
+    color: #fff;
+    border: 0;
+    height: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    /* line-height: 30px; */
+}
+
+i {
+    font-style: normal;
+    display: inline-block;
+}
+i.arrow-down {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    position: absolute;
+
+}
+
 .ui {
     position: fixed;
     top: 0;
@@ -19,7 +42,6 @@ button:not(:disabled) {
     width: 36px;
     height: 36px;
 
-    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .1))
 }
 
 .ui:not(.visible) {
@@ -29,11 +51,19 @@ button:not(:disabled) {
 
 .ui h3 {
     margin: 0;
-    padding: 0.2em 0;
+    padding: 0.4em 0 0.6em;
     text-align: center;
     text-transform: capitalize;
     color: #fff;
-    background-color: #34495e;
+    background-color: #00D5E0;
+    letter-spacing: 1px;
+    /* text-shadow: 1px 1px 10px rgba(0,0,0,.5); */
+}
+
+.ui select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
 }
 
 .ui select,
@@ -48,10 +78,17 @@ button:not(:disabled) {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     background-color: transparent;
-
+    
     -webkit-font-smoothing: subpixel-antialiased;
+    letter-spacing: 0.5px;
+    color: #555;
 }
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .ui select {
+        padding-left: 8px;
+    }
+}
 .ui select:hover,
 .ui input:hover,
 .ui select:focus,
@@ -65,16 +102,42 @@ button:not(:disabled) {
     width: 168px;
 }
 
-.ui .go {
+/* .ui .go {
     font-weight: bold;
-}
+} */
 
-.ui p {
+/* .ui p {
     margin: 8px 16px;
 }
 
 .ui p.desc {
     font-size: 13px;
+} */
+
+.ui>div {
+    margin: 8px 16px;
+}
+
+.ui>div p.desc {
+    font-size: 13px;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper:after {
+    content: "";
+    position: absolute;
+    right: 4px;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../icons/arrow-down.png) no-repeat;
+    background-color: #fff;
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
 }
 
 .ui:not([id]) button {
@@ -106,9 +169,14 @@ button:not(:disabled) {
     padding-right: 16px;
     text-align: right;
 }
+.ui div >span:nth-of-type(1){
+    padding-left: 10px;
+    color: #555;
+}
 
 .ui span {
     font-size: 80%;
+    vertical-align: top;
     text-transform: uppercase;
     /* padding-left: 8px; */
     /* letter-spacing: 1px; */
@@ -161,7 +229,7 @@ button:not(:disabled) {
     /* z-index: 999; */
     position: absolute;
     /* top: 48%; */
-    top: 60%;
+    top: 400px;
     /* left: -23px; */
     left: -20px;
     width: 35px;

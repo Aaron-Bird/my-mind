@@ -4465,12 +4465,13 @@ MM.UI.Backend.Image = Object.create(MM.UI.Backend, {
 
 MM.UI.Backend.Image.save = function() {
     var name = MM.App.map.getName() + "." + "png";
+    MM.App.adjustFontSize(10);
     html2canvas(document.querySelector("#port>.item"), {
         removeContainer: false,
         scale: 1,
         'Window.innerWidth': 3000
     }).then(canvas => {
-
+        MM.App.adjustFontSize(-10);
         dataURL = canvas.toDataURL("png", 1);
         var img = document.createElement('img');
         var link = document.createElement("a");
@@ -5278,6 +5279,11 @@ MM.App = {
 }
 
 //alert when close window 
-window.onbeforeunload = function() {
-    return true;
-}
+// window.onbeforeunload = function() {
+//     return true;
+// }
+
+window.onload = function() {
+    MM.App.init();
+    MM.App.io.restore();
+};

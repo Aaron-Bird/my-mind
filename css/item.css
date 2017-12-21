@@ -19,7 +19,7 @@
 }
 
 .content > * {
-	vertical-align: middle;
+	/* vertical-align: middle; */
 }
 
 .text {
