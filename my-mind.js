@@ -4480,8 +4480,8 @@ MM.UI.Backend.Image.save = function() {
         document.body.appendChild(link);
         link.click();
         link.parentNode.removeChild(link);
-        var promise = new _Promise().fulfill();
-        return promise;
+        // var promise = new _Promise().fulfill();
+        // return promise;
     });
 }
 
@@ -5279,9 +5279,9 @@ MM.App = {
 }
 
 //alert when close window 
-// window.onbeforeunload = function() {
-//     return true;
-// }
+window.onbeforeunload = function() {
+    return true;
+}
 
 window.onload = function() {
     MM.App.init();

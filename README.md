@@ -6,9 +6,9 @@ My Mind
 This item fork from [my-mind](https://github.com/ondras/my-mind)
 
 ## Some Change
-- change UI style
+- UI style change 
 - add alert when window close 
-- fixed Screenshot bug
+- fixed screenshot bug
 - fixed underline break bug
 
 
